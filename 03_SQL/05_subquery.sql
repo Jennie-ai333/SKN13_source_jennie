@@ -216,7 +216,7 @@ from emp
 where dept_id in (select dept_id from dept where loc='New York'); -- in 연산자 쓰기
 
 -- subquery where 절의 비교 컬럼 loc 이 unique가 아닌 경우 -> 결과행이 여러개일 수 있다 
--- 다중행 subquery 연산.
+-- 다중행 sub query 연산.
 
 
 
@@ -284,8 +284,8 @@ from (
 	from emp
 	group by emp_name
     order by cnt
-    ) as t -- 선생님은 그냥 t라고 썼는데 둘 다 되는지 물어보기 ...  .. . . . .. . 
-where cnt >= 2;
+    ) t -- table 의 뜻. 그냥 t를 쓰는것. 가상의 테이블 as t도 가능
+    where cnt >= 2;
 
 -- 몇번 나왓는지를 count 라는 걸로 조회하겠다. 
 

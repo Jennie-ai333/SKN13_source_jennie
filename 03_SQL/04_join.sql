@@ -18,6 +18,7 @@
 ******************************************************************************** */        
 
 use hr_join;
+use hr;
 
 /* ****************************************
 -- INNER JOIN
@@ -58,7 +59,7 @@ from emp e join dept d on e.dept_id = d.dept_id
 where e.emp_id = 100;
 
 -- select * from emp where emp_id = 100;
--- select * from dept ehre dept_id = 90;
+-- select * from dept where dept_id = 90;
 -- 을 한번에 합친 것 
 
 -- 직원_ID(emp.emp_id), 이름(emp.emp_name), 급여(emp.salary), 담당업무명(job.job_title), 소속부서이름(dept.dept_name)을 조회
@@ -69,7 +70,7 @@ from	emp e join job j on e.job_id = j.job_id
 			  join dept d on e.dept_id = d.dept_id
 order by 1;
 
--- 여기서 왜 프롬 _id가 되는지 귱굼, 표를 한번 확인해봐야겠다..
+
 
 
 --  직원 ID 가 200 인 직원의 직원_ID(emp.emp_id), 이름(emp.emp_name), 급여(emp.salary), 담당업무명(job.job_title), 소속부서이름(dept.dept_name)을 조회              
